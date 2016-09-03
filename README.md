@@ -66,7 +66,7 @@ In another tab, open up [W3Schools's Try it Yourself Editor](http://www.w3school
 
 Execute each of the following commands by writing them in the "SQL Statement" textbox and then hitting the "Run SQL" button.
 
-* `SELECT * FROM Customers;`
+* `SELECT * FROM Customers`
 * `SELECT * FROM Orders`
 * `SELECT * FROM OrderDetails`
 
