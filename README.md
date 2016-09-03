@@ -66,9 +66,9 @@ In another tab, open up [W3Schools's Try it Yourself Editor](http://www.w3school
 
 Execute each of the following commands by writing them in the "SQL Statement" textbox and then hitting the "Run SQL" button.
 
-* ```SELECT * FROM Customers;```
-* ```SELECT * FROM Orders;```
-* ```SELECT * FROM OrderDetails;```
+* `SELECT * FROM Customers;`
+* `SELECT * FROM Orders`
+* `SELECT * FROM OrderDetails`
 
 Now that we have a database to play with, let's learn how to write some basic queries.
 
@@ -93,19 +93,19 @@ WHERE <i>column operator value</i>
 ### Simple SELECT examples
 1. Get the ID numbers of names of all customers.
 ```sql
-SELECT CustomerID, CustomerName FROM Customers;
+SELECT CustomerID, CustomerName FROM Customers
 ```
 2. Get all information from the Customer table.
 ```sql
-SELECT * FROM Customers;
+SELECT * FROM Customers
 ```
 3. Which products cost $50 or more?
 ```sql
-SELECT ProductName, Price FROM Products WHERE Price >= 50;
+SELECT ProductName, Price FROM Products WHERE Price >= 50
 ```
 4. Which customers reside in Buenos Aires?
 ```sql
-SELECT * FROM Customers WHERE City = "Buenos Aires";
+SELECT * FROM Customers WHERE City = "Buenos Aires"
 ```
 #### DISTINCT
 The `DISTINCT` keyword removes duplicate rows returned by a query.
