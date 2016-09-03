@@ -533,7 +533,7 @@ We do have an operator to check if a value is `NULL`.
 
 `LEFT JOIN` returns all rows from the left table (table1), even if there are no matches on the right table. If there is no match, the field(s) corresponding to the right table will be `NULL`.
 
-Example: Generate a report of every customer and an order they've placed if any.
+Example: Generate a report of every customer and an order they have placed if any.
 
 ```SQL
 SELECT Customers.CustomerName, Orders.OrderID
@@ -560,11 +560,13 @@ ON Customers.CustomerID=Orders.CustomerID
 ORDER BY Customers.CustomerName;
 ```
 
-### More Exercises
+### More Exercises\
 
-At this point, we can write some very informing queries. Try these excercises to see what you know and help solidify what you've learned up to this point.
+At this point, we can write some very informing queries. Try these excercises to see what you know and help solidify what you have learned up to this point.
 
-3\. (Difficult) Select all categories, listed in order of which categories are the most purchased.
+
+
+3\. (Difficult) Select all categories, listed in order of which categories are the most ordered.
 
 4\.  (Difficult) Select all products that a customer in the UK has ordered.
 
@@ -572,10 +574,19 @@ At this point, we can write some very informing queries. Try these excercises to
 
 Possible solutions:
 
+1\.
+
+2\.
+
 3\.
 
 ```SQL
-
+SELECT Categories.CategoryName, COUNT(Products.ProductID) AS TotalCount
+FROM Categories
+INNER JOIN Products
+ON Categories.CategoryID = Products.CategoryID
+GROUP BY Categories.CategoryName
+ORDER BY TotalCount DESC
 ```
 
 4\.
@@ -595,7 +606,7 @@ ORDER BY Products.ProductName ASC
 
 ### Creating a Table
 
-At this point, I will very briefly introduce the keywords used to insert, update, and delete records in a database. Before doing that, let's create a table of our very own.
+At this point, I will very briefly introduce the keywords used to insert, update, and delete records in a database. Before doing that, lets create a table of our very own.
 
 <pre>
 CREATE TABLE <i>t_name</i> (<i>col_name1</i> <i>data_type</i>(<i>size</i>), <i>col_name2</i> <i>data_type</i>(<i>size</i>), ...)
@@ -628,19 +639,70 @@ Syntax 2:
 
 <pre>
 INSERT INTO <i>t_name</i> (<i>column1</i>, <i>column2></i>, ...)
-VALUES (<i>value1</i>,<i>value2</i>, ... );
+VALUES (<i>value1</i>,<i>value2</i>, ... )
 </pre>
 
 Example:
 
 ```SQL
-INSERT INTO Students
+INSERT INTO Students (StudentName, AcademicStanding, Major, EnrollmentDate)
+VALUES ("Andrew", "Junior", "Computer Science", "2014-08-00")
 ```
 
+### UPDATE
 
-### Additional Resources
+`UPDATE` is used to modify existing records in a table.
 
+Syntax:
 
+```SQL
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition
+```
+
+Example: Update Andrew's `AcademicStanding` value to `Senior`.
+
+```SQL
+UPDATE Students
+SET AcademicStanding = "Senior"
+WHERE StudentName = "Andrew"
+```
+
+### DELETE
+
+`DELETE` is used to delete exisiting records in a table.
+
+Example: Remove Andrew from the `Students` table.
+
+```SQL
+DELETE FROM Students
+WHERE StudentName = "Andrew Kolos"
+```
+
+&nbsp;
+
+### Database Management Systems
+
+While SQL is an ANSI standard, there are many versions of it. While they all support major commands, they have their own unique features. Examples include
+
+* Microsoft's SQL Server
+* Oracle SQL
+* IBM's DB2
+* PostgreSQL
+* MySQL
+
+Fortunately, pretty much everything we learned here is standard amongst all DBMSs.
+
+### Writing a Simple C Program to Manage a Database with one Table using SQLite
+
+SQLite is a very minimalistic, open-source DBMS. You can [download it here](https://www.sqlite.org/download.html).
+
+### Where do I Go Next? Also Additional Resources
+
+[TutorialsPoint SQLite C/C++ Tutorial](http://www.tutorialspoint.com/sqlite/sqlite_c_cpp.htm). SQLite is a minimalisitc, open-source DBMS that requires little set-up (most DBMSs take quite a bit of setup). You can [download it here](https://www.sqlite.org/download.html).
+
+[MySQL Community Server Download Page](http://dev.mysql.com/downloads/mysql/)
 
 [W3Schools SQL Tutorial](http://www.w3schools.com/sql/default.asp)
 
