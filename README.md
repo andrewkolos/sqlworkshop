@@ -35,9 +35,6 @@ For example a table of customers might look something like this:
 	* `DISTINCT`
 	* `ORDER BY`
 	* `AVG`
-* Datatypes
-	* Datatypes
-	* Typecasting using `CAST`
 * More with  `WHERE`
 * Functions
 	* Scalar Functions
@@ -48,6 +45,9 @@ For example a table of customers might look something like this:
 	* `OUTER JOIN`s
 	* `UNION`s
 * More Practice Excercises
+* Datatypes
+	* Datatypes
+	* Typecasting using `CAST`
 * Creating Tables
 * Inserting Rows into a Table
 * Updating Rows in a Table
@@ -130,30 +130,6 @@ Example: Get a list of distinct cities in ascending order.
 SELECT DISTINCT City FROM Customers ORDER BY City ASC
 ```
 
-
-&nbsp;
-
-### Datatypes
-We'll need more tools to make more complex requests of a database. We can use expressions (i.e. any operations dealing with numbers, strings, dates, times, etc.) to broaden or narrow the scope of a query.
-We've already used some expressions when filtering our search results using the `WHERE` keyword.
-
-#### Datatypes
-Before looking into expressions, take a look at the [data types](http://www.w3schools.com/sql/sql_datatypes_general.asp) available in most versions of SQL. A data type simply define what kind of values a variable can take.
-
-#### Type casting using CAST
-Normally, we can't add ```1``` and ```"2"```. This would be like adding a number and a word, which doesn't make sense. If we could somehow convert the string ```"2"``` to the number ```2```, we could add with ```1```, producing ```3```. 
-
-We use the ```CAST``` funciton to change the data type of an expression.
-
-```sql
-CAST (*expression* AS *data type*)
-```
-Go ahead and try it out.
-```sql
-SELECT (1 + CAST("2" AS INTEGER));
-```
-
-One interesting thing to note is that we can add/substract date/time values. However, how this is done varies between different database management systems (i.e. the software that manages the database).
 
 &nbsp;
 
@@ -577,6 +553,29 @@ On Orders.CustomerID = Customers.CustomerID
 WHERE Customers.Country = "UK"
 ORDER BY Products.ProductName ASC
 ```
+
+&nbsp;
+
+### Datatypes
+Before making our own tables, we'll need to learn more about datatypes.
+
+#### Datatypes
+Take a look at the [data types](http://www.w3schools.com/sql/sql_datatypes_general.asp) available in most versions of SQL. A data type simply defines what kind of values a variable can take. For example, we don't want to be able to assign someones birthdate to be the string "Andrew".
+
+#### Type casting using CAST
+Normally, we can't add ```1``` and ```"2"```. This would be like adding a number and a word, which doesn't make sense. If we could somehow convert the string ```"2"``` to the number ```2```, we could add with ```1```, producing ```3```. 
+
+We use the ```CAST``` funciton to change the data type of an expression.
+
+```sql
+CAST (*expression* AS *data type*)
+```
+Go ahead and try it out.
+```sql
+SELECT (1 + CAST("2" AS INTEGER));
+```
+
+One interesting thing to note is that we can add/substract date/time values. However, how this is done varies between different database management systems (i.e. the software that manages the database).
 
 ### Creating a Table
 
