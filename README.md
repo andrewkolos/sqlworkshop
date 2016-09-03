@@ -203,8 +203,8 @@ These are the standard operators. Note that each RDBMS will have more operators 
 | !=, \<\>     | Not equal |
 | >					 | Greater than |
 | \<					 | Less than |
-| \>=, !\<     | Greater than or equal to |
-| \<\=, \!\>     | Less than or equal to |
+| \>=, !<     | Greater than or equal to |
+| <=, !>     | Less than or equal to |
 
 
 ##### Notes on Comparison Operators
@@ -556,7 +556,7 @@ ON Customers.CustomerID=Orders.CustomerID
 ORDER BY Customers.CustomerName;
 ```
 
-### More Exercises\
+### More Exercises
 
 At this point, we can write some very informing queries. Try these excercises to see what you know and help solidify what you have learned up to this point.
 
