@@ -4,7 +4,7 @@
 In this workshop, we will focus on retrieving data from an SQL database. That is, we will NOT go very deeply into creation/modification of databases OR **proper database design**. However, we will briefly go over creating/modifying tables so that you can have something to query at the end of the workshop.
 
 ## Goal
-SQL has a great amount of depth, like any language. To look at the lagnuage with any significant depth would take many, many workshops. However, by the end of this workshop, you should be able to write simple database queries.
+SQL has a great amount of depth, like any language. To look at the language in depth would take many, many workshops. However, by the end of this workshop, you should be able to write simple database queries that will get the job done for most small apps you might want to create.
 
 From here, you will just need to learn specific libraries/APIs you can use to have your program interact with database management systems (e.g. [the java.sql package for Java](https://docs.oracle.com/javase/7/docs/api/java/sql/package-summary.html) or [ADO.NET for C#](http://www.codeproject.com/Articles/361579/A-Beginners-Tutorial-for-Understanding-ADO-NET)).
 
@@ -18,7 +18,7 @@ Nothing. However, experience with a programming language such as C will make und
 * Structured Query Language
 * Used to access and manipulate databases
 
-Databases store information in the form of entries (or rows) in tables.
+Databases store information in the form of **entries** (or rows) in tables.
 
 For example a table of customers might look something like this:
 
@@ -54,7 +54,6 @@ For example a table of customers might look something like this:
 * Updating Rows in a Table
 * Deleting Rows from a Table
 * Database Management Systems
-* Writing a Simple C Program to Manage a Database with one Table using SQLite
 * Reflection
 * Additional Resources
 
@@ -68,7 +67,7 @@ Execute each of the following commands by writing them in the "SQL Statement" te
 
 * `SELECT * FROM Customers`
 * `SELECT * FROM Orders`
-* `SELECT * FROM OrderDetails`
+* `SELECT * FROM Products`
 
 Now that we have a database to play with, let's learn how to write some basic queries.
 
@@ -135,7 +134,7 @@ SELECT DISTINCT City FROM Customers ORDER BY City ASC
 
 &nbsp;
 
-### Datatypes and Expressions
+### Datatypes
 We'll need more tools to make more complex requests of a database. We can use expressions (i.e. any operations dealing with numbers, strings, dates, times, etc.) to broaden or narrow the scope of a query.
 We've already used some expressions when filtering our search results using the `WHERE` keyword.
 
@@ -155,27 +154,7 @@ Go ahead and try it out.
 SELECT (1 + CAST("2" AS INTEGER));
 ```
 
-#### Expressions
-
-Expressions used in SQL statements are generally of these three types:
-* Concatentation
-* Mathematical
-* Date and Time Arithmetic
-
-##### Concatentation
-
-The SQL Standard defines two bars (||) as the concatenation operator.
-
-Example:
-```sql
-SELECT CustomerName || " lives in " || City FROM Customers;
-```
-
-##### Mathematical
-Adding, substracting, multiplying, dividing, etc.
-
-##### Date and Time Arithmetic
-We can add/substract date/time values. However, how this is done varies between different Relational Database Management Systems (i.e. the software that manages the database).
+One interesting thing to note is that we can add/substract date/time values. However, how this is done varies between different database management systems (i.e. the software that manages the database).
 
 &nbsp;
 
@@ -690,9 +669,6 @@ While SQL is an ANSI standard, there are many versions of it. While they all sup
 
 Fortunately, pretty much everything we learned here is standard amongst all DBMSs.
 
-### Writing a Simple C Program to Manage a Database with one Table using SQLite
-
-SQLite is a very minimalistic, open-source DBMS. You can [download it here](https://www.sqlite.org/download.html).
 
 ### Where do I Go Next? Also Additional Resources
 
