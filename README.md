@@ -35,10 +35,9 @@ For example a table of customers might look something like this:
 	* `DISTINCT`
 	* `ORDER BY`
 	* `AVG`
-* Datatypes and Expressions
+* Datatypes
 	* Datatypes
 	* Typecasting using `CAST`
-	* Expressions
 * More with  `WHERE`
 * Functions
 	* Scalar Functions
