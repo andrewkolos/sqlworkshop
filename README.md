@@ -1,7 +1,7 @@
 # SQL For Beginners
 
 ## This workshop
-In this workshop, we will focus on retrieving data from an SQL database. That is, we will NOT go very deeply into creation/modification of databases OR **proper database design** (which isn't crucial for very simple databases). However, we will briefly go over creating/modifying tables so that you can have something to query at the end of the workshop.
+In this workshop, we will focus on retrieving data from an SQL database. That is, we will NOT go very deeply into creation/modification of databases OR **proper database design**. However, we will briefly go over creating/modifying tables so that you can have something to query at the end of the workshop.
 
 ## Goal
 SQL has a great amount of depth, like any language. To look at the lagnuage with any significant depth would take many, many workshops. However, by the end of this workshop, you should be able to write simple database queries.
