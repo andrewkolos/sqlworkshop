@@ -6,7 +6,7 @@ In this workshop, we will focus on retrieving data from an SQL database. That is
 ## Goal
 SQL has a great amount of depth, like any language. To look at the lagnuage with any significant depth would take many, many workshops. However, by the end of this workshop, you should be able to write simple database queries.
 
-From here, you will just need to learn specific libraries/apis you can use to interact with database platforms (e.g. [the java.sql package for Java](https://docs.oracle.com/javase/7/docs/api/java/sql/package-summary.html) or [ADO.NET for C#](http://www.codeproject.com/Articles/361579/A-Beginners-Tutorial-for-Understanding-ADO-NET)).
+From here, you will just need to learn specific libraries/APIs you can use to have your program interact with database management systems (e.g. [the java.sql package for Java](https://docs.oracle.com/javase/7/docs/api/java/sql/package-summary.html) or [ADO.NET for C#](http://www.codeproject.com/Articles/361579/A-Beginners-Tutorial-for-Understanding-ADO-NET)).
 
 ## Background
 
