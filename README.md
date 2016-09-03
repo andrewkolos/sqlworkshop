@@ -29,10 +29,6 @@ For example a table of customers might look something like this:
 |3			 | Smith Johnson| 123 Peach Street | Chapel Hill| 27514 | NC |
 
 
-### Motivation
-
-
-
 ## Table of contents
 * Simple Queries
 	* Basic queries
