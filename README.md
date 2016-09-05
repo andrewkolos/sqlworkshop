@@ -34,7 +34,6 @@ For example a table of customers might look something like this:
 	* Basic queries
 	* `DISTINCT`
 	* `ORDER BY`
-	* `AVG`
 * More with  `WHERE`
 * Functions
 	* Scalar Functions
