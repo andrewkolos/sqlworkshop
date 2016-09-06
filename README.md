@@ -509,6 +509,19 @@ ON Customers.CustomerID=Orders.CustomerID
 ORDER BY Customers.CustomerName;
 ```
 
+#### UNION
+
+The `UNION` operator combines the result-set of two or more `SELECT` statements.
+
+Example: Get a list of all the distinct cities that either a resident lives in or a supplier is based in.
+
+```SQL
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City
+```
+
 ### More Exercises
 
 At this point, we can write some very informing queries. Try these excercises to see what you know and help solidify what you have learned up to this point.
