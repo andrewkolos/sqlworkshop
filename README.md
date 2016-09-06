@@ -374,7 +374,6 @@ While there is so much more to SQL, we actually have all the basic tools necessa
 1. Select all products with a price anywhere in between `15` and `30`. Order them by price in descending order.
 2. Select all products that have a price greater than the average price of all products. Order them by price in descending order.
 3. Count the number of products that have a price greater than than the average price of all products.
-4. Count the number of products in each category.
 
 Solutions (note that each problem has multiple valid solutions):
 
@@ -400,15 +399,6 @@ FROM Products
 WHERE Price > (SELECT AVG(Price) FROM Products)
 ```
 
-4\.
-```SQL
-SELECT Categories.CategoryName, COUNT(Products.ProductID) AS TotalCount
-FROM Categories
-INNER JOIN Products
-ON Categories.CategoryID = Products.CategoryID
-GROUP BY Categories.CategoryName
-ORDER BY TotalCount
-```
 
 &nbsp;
 
@@ -527,6 +517,9 @@ ORDER BY City
 At this point, we can write some very informing queries. Try these excercises to see what you know and help solidify what you have learned up to this point.
 
 
+1\. Count the number of suppliers in each country. Order results by the number of suppliers, and then by the name of country.
+
+2\. Count the number of products in each category.
 
 3\. (Difficult) Select all categories, listed in order of which categories are the most ordered.
 
@@ -538,7 +531,23 @@ Possible solutions:
 
 1\.
 
+```SQL
+SELECT Country, Count(Country) AS CountryCount
+FROM Suppliers
+GROUP BY Country
+ORDER BY CountryCount, Country
+```
+
 2\.
+
+```SQL
+SELECT Categories.CategoryName, COUNT(Products.ProductID) AS TotalCount
+FROM Categories
+INNER JOIN Products
+ON Categories.CategoryID = Products.CategoryID
+GROUP BY Categories.CategoryName
+ORDER BY TotalCount
+```
 
 3\.
 
