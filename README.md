@@ -691,10 +691,12 @@ Fortunately, pretty much everything we learned here is standard amongst all DBMS
 
 ### Where do I Go Next? Also Additional Resources
 
-[TutorialsPoint SQLite C/C++ Tutorial](http://www.tutorialspoint.com/sqlite/sqlite_c_cpp.htm). SQLite is a minimalisitc, open-source DBMS that requires little set-up (most DBMSs take quite a bit of setup). You can [download it here](https://www.sqlite.org/download.html).
+[TutorialsPoint SQLite C/C++ Tutorial](http://www.tutorialspoint.com/sqlite/sqlite_c_cpp.htm). SQLite is a minimalisitc, open-source DBMS that requires little set-up. You can [download it here](https://www.sqlite.org/download.html).
 
 [MySQL Community Server Download Page](http://dev.mysql.com/downloads/mysql/)
 
 [W3Schools SQL Tutorial](http://www.w3schools.com/sql/default.asp)
 
 [TutorialsPoint SQL Tutorial](http://www.tutorialspoint.com/sql/index.htm)
+
+[Brief Tutorial on Database Design](http://en.tekstenuitleg.net/articles/software/database-design-tutorial/intro.html)
