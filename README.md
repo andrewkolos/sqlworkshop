@@ -632,7 +632,7 @@ VALUES (<i>value1</i>, <i>value2</i>, ...)
 Syntax 2:
 
 <pre>
-INSERT INTO <i>t_name</i> (<i>column1</i>, <i>column2></i>, ...)
+INSERT INTO <i>t_name</i> (<i>column1</i>, <i>column2</i>, ...)
 VALUES (<i>value1</i>,<i>value2</i>, ... )
 </pre>
 
