@@ -372,8 +372,10 @@ We see that this works. Yay!
 While there is so much more to SQL, we actually have all the basic tools necessary to retrieve information from a database. Try some excercises make sure you are understanding everything so far.
 
 1. Select all products with a price anywhere in between `15` and `30`. Order them by price in descending order.
-2. Select all products that have a price greater than the average price of all products. Order them by price in descending order.
-3. Count the number of products that have a price greater than than the average price of all products.
+2. What's the most expensive product available? What is it's price?
+3. What's the average number of products sold in any given order?
+4. Select all products that have a price greater than the average price of all products. Order them by price in descending order.
+5. Count the number of products that have a price greater than than the average price of all products. 
 
 Solutions (note that each problem has multiple valid solutions):
 
@@ -384,7 +386,20 @@ FROM Products
 WHERE Price BETWEEN 15 AND 30
 ORDER BY Price DESC
 ```
-2\. 
+
+2\.
+```SQL
+SELECT ProductName, MAX(Price)
+FROM Products
+```
+
+3\.
+```SQL
+SELECT AVG(Quantity)
+FROM OrderDetails
+```
+
+4\. 
 ```SQL
 SELECT * 
 FROM Products
@@ -392,7 +407,7 @@ WHERE Price > (SELECT AVG(Price) FROM Products)
 ORDER BY Price DESC
 ```
 
-3\.
+5\.
 ```SQL
 SELECT COUNT(*) 
 FROM Products
@@ -516,21 +531,21 @@ ORDER BY City
 
 At this point, we can write some very informing queries. Try these excercises to see what you know and help solidify what you have learned up to this point.
 
-
 1\. Count the number of suppliers in each country. Order results by the number of suppliers, and then by the name of country.
 
-2\. Count the number of products in each category.
+2\. Get a list of orders shipped by Speedy Express.
 
-3\. (Difficult) Select all categories, listed in order of which categories are the most ordered.
+3\. Count the number of products in each category.
 
-4\.  (Difficult) Select all products that a customer in the UK has ordered.
+4\. (Difficult) Select all categories, listed in order of which categories are the most ordered.
+
+5\.  (Difficult) Select all products that a customer in the UK has ordered.
 
 **Try solving these on your own before looking at my solutions**
 
 Possible solutions:
 
 1\.
-
 ```SQL
 SELECT Country, Count(Country) AS CountryCount
 FROM Suppliers
@@ -539,6 +554,16 @@ ORDER BY CountryCount, Country
 ```
 
 2\.
+```SQL
+SELECT *
+FROM Orders
+INNER JOIN Shippers
+ON Orders.ShipperID = Shippers.ShipperID
+WHERE ShipperName = "Speedy Express"
+```
+
+
+3\.
 
 ```SQL
 SELECT Categories.CategoryName, COUNT(Products.ProductID) AS TotalCount
@@ -549,7 +574,7 @@ GROUP BY Categories.CategoryName
 ORDER BY TotalCount
 ```
 
-3\.
+4\.
 
 ```SQL
 SELECT Categories.CategoryName, COUNT(Products.ProductID) AS TotalCount
@@ -560,7 +585,7 @@ GROUP BY Categories.CategoryName
 ORDER BY TotalCount DESC
 ```
 
-4\.
+5\.
 
 ```SQL
 SELECT Products.ProductID, Products.ProductName, Customers.CustomerName, Customers.Country
