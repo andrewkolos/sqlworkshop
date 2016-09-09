@@ -3,19 +3,28 @@
 ## This workshop
 In this workshop, we will focus on retrieving data from an SQL database. That is, we will NOT go very deeply into creation/modification of databases OR **proper database design**. However, we will briefly go over creating/modifying tables so that you can have something to query at the end of the workshop.
 
+## Motivation
+
+Databases are ubiquitious in digital business. Any website or interal business uses databases to neatly store huge amounts of data that would be unmanageable in a spreadsheet. SQL is a query language that lets us generates useful reports using data from databases, and it lets us do it *quickly*.
+
+Knowing SQL is a valuable skill for anyone interested in working with data, and data is everywhere! The majority of businesses rely on databases to store their data. Whether it's for big business or just a small side project you are interested in creating,  having databases and being able to query them using SQL is often highly valuable.
+
 ## Goal
 SQL has a great amount of depth, like any language. To look at the language in depth would take many, many workshops. However, by the end of this workshop, you should be able to write simple database queries that will get the job done for most small apps you might want to create.
 
-From here, you will just need to learn specific libraries/APIs you can use to have your program interact with database management systems (e.g. [the java.sql package for Java](https://docs.oracle.com/javase/7/docs/api/java/sql/package-summary.html) or [ADO.NET for C#](http://www.codeproject.com/Articles/361579/A-Beginners-Tutorial-for-Understanding-ADO-NET)).
+From here, you'll simply need to install database management software to create databases with.
+
+If you wish to create an application that interacts with your database, you will need to learn specific libraries/APIs you can use to have your program interact with it (e.g. [the java.sql package for Java](https://docs.oracle.com/javase/7/docs/api/java/sql/package-summary.html) or [ADO.NET for C#](http://www.codeproject.com/Articles/361579/A-Beginners-Tutorial-for-Understanding-ADO-NET)).
 
 ## Background
 
 ### What do I need to know before learning SQL?
 
-Nothing. However, experience with a programming language such as C will make understanding datatypes, comparisons, and functions easier.
+Nothing. However, experience with a programming language such as C, C++, or Java will make understanding datatypes, comparisons, and functions easier.
 
 ### What is SQL?
 * Structured Query Language
+* As a query language, it's almost completely focused on retrieving data and generating reports
 * Used to access and manipulate databases
 
 Databases store information in the form of **entries** (or rows) in tables.
