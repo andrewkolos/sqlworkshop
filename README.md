@@ -116,8 +116,9 @@ SELECT * FROM Customers WHERE City = "Buenos Aires"
 #### DISTINCT
 The `DISTINCT` keyword removes duplicate rows returned by a query.
 Syntax:
+
 ```sql
-SELECT DISTINCT <columns> FROM <tables>
+SELECT DISTINCT column FROM <tables>
 ```
 Example: Get a list of distinct cities that the customers reside in
 ```SQL
@@ -130,7 +131,7 @@ The `ORDER BY` keyword allows you to sort information returned by a query.
 Syntax:
 ```sql
 SELECT Statement 
-ORDER BY *column* ASC|DESC
+ORDER BY column ASC|DESC
 ```
 
 Example: Get a list of distinct cities in ascending order.
